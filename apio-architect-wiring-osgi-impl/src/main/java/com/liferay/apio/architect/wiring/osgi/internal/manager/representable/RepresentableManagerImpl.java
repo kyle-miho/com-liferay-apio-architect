@@ -78,6 +78,11 @@ public class RepresentableManagerImpl
 	}
 
 	@Override
+	public Map<String, Representor> getRepresentorMap() {
+		return INSTANCE.getRepresentorMap(this::_computeRepresentables);
+	}
+
+	@Override
 	public <T, U> Optional<Representor<T, U>> getRepresentorOptional(
 		String name) {
 
