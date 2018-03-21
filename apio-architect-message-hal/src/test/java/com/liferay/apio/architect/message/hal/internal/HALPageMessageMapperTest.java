@@ -37,6 +37,7 @@ import com.liferay.apio.architect.test.util.writer.MockWriterUtil;
 import com.liferay.apio.architect.unsafe.Unsafe;
 import com.liferay.apio.architect.wiring.osgi.manager.representable.RepresentableManager;
 
+import java.util.Map;
 import java.util.Optional;
 
 import javax.ws.rs.core.HttpHeaders;
@@ -57,6 +58,11 @@ public class HALPageMessageMapperTest implements RepresentableManager {
 		_pageMessageMapper = new HALPageMessageMapper<>();
 
 		_pageMessageMapper.representableManager = this;
+	}
+
+	@Override
+	public Map<String, Representor> getRepresentorMap() {
+		return null;
 	}
 
 	@Override
